@@ -1,0 +1,14 @@
+- name: Apply basic config to all systems
+  hosts: all
+  roles:
+    - common
+
+- name: Install MySQL on databases
+  hosts: database
+  roles:
+    - database
+
+- name: Install Apache2 on webservers
+  hosts: webservers
+  roles:
+    - webserver

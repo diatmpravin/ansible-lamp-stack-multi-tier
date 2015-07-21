@@ -1,0 +1,5 @@
+- name: System - Install MySQL
+  apt: pkg={{item}} state=present
+  sudo: yes
+  with_items:
+    - mysql-server

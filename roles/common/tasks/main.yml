@@ -1,0 +1,11 @@
+- name: "Update OS paches"
+  shell: apt-get -y update
+  sudo: yes
+
+- name: System - Install base packages
+  apt: pkg={{item}} state=present
+  sudo: yes
+  with_items:
+    - git
+    - screen
+    - traceroute
